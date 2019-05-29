@@ -14,12 +14,27 @@ Program to read org files, parse the contents
 ** DONE get the contents of files
    CLOSED: [2019-05-29 Wed 07:00]
 ** load org files in
-** have a list of loaded files in
+maybe make a resource for that?
+** DONE have a list of loaded files in
+   CLOSED: [2019-05-29 Wed 07:03]
+** parse org files to objects or dictionary
+   rules:
+*** if the line starts with *[space] it's a 1st lvl header
+*** strip the file from all non header and non property text
+*** if it start with [indentend with last header]:LOGBOOK:
+
+** show date and time heatmap clock time for each file
+take into account the time clicked and the frequency in the day
+*** show callendar
+*** show highlighted on the callendar the dates that have clocks
+*** change the tint of highlight depending on the frequency or times
+*** add option to change 
+from number of occurencies to total time per day
+
 ** save loaded files location and previous data
+save on disc
 ** check if the data needs to be loaded
 one way to do it is by file's edited time
  or by a has
-** read and parse org files to objects or dictionary
 ** have a way to remove files
-** show date and time heatmap clock time for each file
-take into account the time clicked and the frequency in the day
+** remember the last opened files
