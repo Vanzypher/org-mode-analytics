@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/import_files_button.gd" type="Script" id=1]
+[ext_resource path="res://scripts/import_files_dialog.gd" type="Script" id=2]
+[ext_resource path="res://scripts/file_list.gd" type="Script" id=3]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="MainPanel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ImportFilesButton" type="Button" parent="MainPanel"]
+margin_left = 54.8201
+margin_top = 27.8561
+margin_right = 144.82
+margin_bottom = 47.8561
+text = "Import Files"
+script = ExtResource( 1 )
+
+[node name="ImportFilesDialog" type="FileDialog" parent="MainPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -454.0
+margin_top = -197.0
+margin_right = 454.0
+margin_bottom = 196.0
+window_title = "Import Files"
+dialog_text = "choose the files to add"
+mode = 1
+access = 2
+filters = PoolStringArray( "*.org" )
+current_dir = "/home/vanzypher/PROJECTS/Programming/org-mode-analytics"
+current_path = "/home/vanzypher/PROJECTS/Programming/org-mode-analytics/"
+script = ExtResource( 2 )
+
+[node name="ItemList" type="ItemList" parent="MainPanel"]
+margin_left = 17.0
+margin_top = 64.0
+margin_right = 181.0
+margin_bottom = 584.0
+same_column_width = true
+
+[node name="FileList" type="Node" parent="."]
+script = ExtResource( 3 )
+[connection signal="pressed" from="MainPanel/ImportFilesButton" to="MainPanel/ImportFilesButton" method="_on_ImportFilesButton_pressed"]
+[connection signal="file_added" from="MainPanel/ImportFilesDialog" to="FileList" method="_on_ImportFilesDialog_file_added"]
+[connection signal="file_selected" from="MainPanel/ImportFilesDialog" to="MainPanel/ImportFilesDialog" method="_on_ImportFilesDialog_file_selected"]
+[connection signal="files_selected" from="MainPanel/ImportFilesDialog" to="MainPanel/ImportFilesDialog" method="_on_ImportFilesDialog_files_selected"]
