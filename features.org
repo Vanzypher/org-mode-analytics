@@ -11,7 +11,8 @@ Program to read org files, parse the contents
 * features
 ** DONE get filenames of org files
    CLOSED: [2019-05-29 Wed 06:35]
-** get the contents of files
+** DONE get the contents of files
+   CLOSED: [2019-05-29 Wed 07:00]
 ** load org files in
 ** have a list of loaded files in
 ** save loaded files location and previous data
