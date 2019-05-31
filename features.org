@@ -25,7 +25,11 @@ maybe make a resource for that?
 *** if it start with :LOGBOOK: after removal of left spaces
 *** DONE get dictionary with clock start and end
     CLOSED: [2019-05-31 Fri 04:40]
-
+** DONE add heatmap ui
+   CLOSED: [2019-05-31 Fri 05:31]
+** in heatmap show only past days
+** in heatmap show only days from this year
+** add choice to show another year
 ** show date and time heatmap clock time for each file
 take into account the time clicked and the frequency in the day
 *** show callendar

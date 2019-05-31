@@ -1,7 +1,7 @@
 extends Node
 
 var list: Array = []
-
+var clocks
 
 func _on_ImportFilesDialog_file_added(file_info: Dictionary):
 #	print(file_info)
@@ -48,6 +48,7 @@ func get_logbook_entries(org_mode_text: String):
 			print(end_time)
 			
 			
+			
 		line = line.lstrip("*")
 		line = line.lstrip(" ")
 		last_header = line
@@ -67,8 +68,8 @@ func _convert_string_date_to_dict(date:String) -> Dictionary:
 	var day: int = int(date.substr(10,2))
 	date_dict["day"] = day
 #	print(day)
-	var day_of_the_week: String = date.substr(12,3)
-	date_dict["day_of_the_week"] = day_of_the_week
+	var weekday: String = convert_day_of_the_week(date.substr(12,3))
+	date_dict["weekday"] = weekday
 #	print(day_of_the_week)
 	var hour: String = date.substr(16,2)
 	date_dict["hour"] = hour
@@ -78,3 +79,21 @@ func _convert_string_date_to_dict(date:String) -> Dictionary:
 #	print(minute)
 #	print(date_dict)
 	return date_dict
+
+func convert_day_of_the_week(day_string:String):
+	match day_string:
+		"Sun":
+			return 0
+		"Mon":
+			return 1
+		"Tue":
+			return 2
+		"Wed":
+			return 3
+		"Thu":
+			return 4
+		"Fri":
+			return 5
+		"Sat":
+			return 6
+	return -1
