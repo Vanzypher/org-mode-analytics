@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/import_files_button.gd" type="Script" id=1]
 [ext_resource path="res://scripts/import_files_dialog.gd" type="Script" id=2]
-[ext_resource path="res://scenes/month-heatmap-ui.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scripts/file_list.gd" type="Script" id=4]
-[ext_resource path="res://scripts/calendar.gd" type="Script" id=5]
+[ext_resource path="res://scripts/heat_map.gd" type="Script" id=3]
+[ext_resource path="res://scenes/month-heatmap-ui.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/file_list.gd" type="Script" id=5]
+[ext_resource path="res://scripts/calendar.gd" type="Script" id=6]
 
 [node name="Main" type="Control"]
 anchor_right = 1.0
@@ -49,10 +50,11 @@ same_column_width = true
 
 [node name="HeatMap" type="Control" parent="MainPanel"]
 editor/display_folded = true
-margin_left = 195.0
+margin_left = 209.0
 margin_top = 416.0
 margin_right = 1005.0
 margin_bottom = 585.0
+script = ExtResource( 3 )
 
 [node name="Background" type="ColorRect" parent="MainPanel/HeatMap"]
 anchor_right = 1.0
@@ -64,11 +66,10 @@ margin_bottom = -15.0
 color = Color( 0.172549, 0.164706, 0.196078, 1 )
 
 [node name="Year" type="GridContainer" parent="MainPanel/HeatMap/Background"]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/vseparation = 9
-custom_constants/hseparation = 31
+custom_constants/vseparation = 12
+custom_constants/hseparation = 30
 columns = 12
 
 [node name="Jan" type="Label" parent="MainPanel/HeatMap/Background/Year"]
@@ -77,141 +78,141 @@ margin_bottom = 14.0
 text = "Jan"
 
 [node name="Feb" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 67.0
-margin_right = 103.0
+margin_left = 66.0
+margin_right = 102.0
 margin_bottom = 14.0
-text = "Jan"
+text = "Feb"
 
 [node name="Mar" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 134.0
-margin_right = 170.0
+margin_left = 132.0
+margin_right = 168.0
 margin_bottom = 14.0
-text = "Jan"
+text = "Mar"
 
 [node name="Apr" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 201.0
-margin_right = 237.0
+margin_left = 198.0
+margin_right = 234.0
 margin_bottom = 14.0
-text = "Jan"
+text = "Apr"
 
 [node name="May" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 268.0
-margin_right = 304.0
+margin_left = 264.0
+margin_right = 300.0
 margin_bottom = 14.0
-text = "Jan"
+text = "May"
 
 [node name="Jun" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 335.0
-margin_right = 371.0
+margin_left = 330.0
+margin_right = 366.0
 margin_bottom = 14.0
-text = "Jan"
+text = "Jun"
 
 [node name="Jul" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 402.0
-margin_right = 438.0
+margin_left = 396.0
+margin_right = 432.0
 margin_bottom = 14.0
-text = "Jan"
+text = "Jul"
 
 [node name="Aug" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 469.0
-margin_right = 505.0
+margin_left = 462.0
+margin_right = 498.0
 margin_bottom = 14.0
-text = "Jan"
+text = "Aug"
 
 [node name="Sep" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 536.0
-margin_right = 572.0
+margin_left = 528.0
+margin_right = 564.0
 margin_bottom = 14.0
-text = "Jan"
+text = "Sep"
 
 [node name="Oct" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 603.0
-margin_right = 639.0
+margin_left = 594.0
+margin_right = 630.0
 margin_bottom = 14.0
-text = "Jan"
+text = "Oct"
 
 [node name="Nov" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 670.0
-margin_right = 706.0
+margin_left = 660.0
+margin_right = 696.0
 margin_bottom = 14.0
-text = "Jan"
+text = "Nov"
 
 [node name="Dec" type="Label" parent="MainPanel/HeatMap/Background/Year"]
-margin_left = 737.0
-margin_right = 773.0
+margin_left = 726.0
+margin_right = 762.0
 margin_bottom = 14.0
-text = "Jan"
+text = "Dec"
 
-[node name="Month1" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_top = 23.0
+[node name="Month1" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_top = 26.0
 margin_right = 36.0
-margin_bottom = 95.0
+margin_bottom = 98.0
 
-[node name="Month2" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 67.0
-margin_top = 23.0
-margin_right = 103.0
-margin_bottom = 95.0
+[node name="Month2" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 66.0
+margin_top = 26.0
+margin_right = 102.0
+margin_bottom = 98.0
 
-[node name="Month3" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 134.0
-margin_top = 23.0
-margin_right = 170.0
-margin_bottom = 95.0
+[node name="Month3" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 132.0
+margin_top = 26.0
+margin_right = 168.0
+margin_bottom = 98.0
 
-[node name="Month4" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 201.0
-margin_top = 23.0
-margin_right = 237.0
-margin_bottom = 95.0
+[node name="Month4" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 198.0
+margin_top = 26.0
+margin_right = 234.0
+margin_bottom = 98.0
 
-[node name="Month5" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 268.0
-margin_top = 23.0
-margin_right = 304.0
-margin_bottom = 95.0
+[node name="Month5" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 264.0
+margin_top = 26.0
+margin_right = 300.0
+margin_bottom = 98.0
 
-[node name="Month6" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 335.0
-margin_top = 23.0
-margin_right = 371.0
-margin_bottom = 95.0
+[node name="Month6" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 330.0
+margin_top = 26.0
+margin_right = 366.0
+margin_bottom = 98.0
 
-[node name="Month7" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 402.0
-margin_top = 23.0
-margin_right = 438.0
-margin_bottom = 95.0
+[node name="Month7" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 396.0
+margin_top = 26.0
+margin_right = 432.0
+margin_bottom = 98.0
 
-[node name="Month8" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 469.0
-margin_top = 23.0
-margin_right = 505.0
-margin_bottom = 95.0
+[node name="Month8" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 462.0
+margin_top = 26.0
+margin_right = 498.0
+margin_bottom = 98.0
 
-[node name="Month9" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 536.0
-margin_top = 23.0
-margin_right = 572.0
-margin_bottom = 95.0
+[node name="Month9" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 528.0
+margin_top = 26.0
+margin_right = 564.0
+margin_bottom = 98.0
 
-[node name="Month10" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 603.0
-margin_top = 23.0
-margin_right = 639.0
-margin_bottom = 95.0
+[node name="Month10" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 594.0
+margin_top = 26.0
+margin_right = 630.0
+margin_bottom = 98.0
 
-[node name="Month11" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 670.0
-margin_top = 23.0
-margin_right = 706.0
-margin_bottom = 95.0
+[node name="Month11" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 660.0
+margin_top = 26.0
+margin_right = 696.0
+margin_bottom = 98.0
 
-[node name="Month12" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 3 )]
-margin_left = 737.0
-margin_top = 23.0
-margin_right = 773.0
-margin_bottom = 95.0
+[node name="Month12" parent="MainPanel/HeatMap/Background/Year" instance=ExtResource( 4 )]
+margin_left = 726.0
+margin_top = 26.0
+margin_right = 762.0
+margin_bottom = 98.0
 
 [node name="HeatMapTitleLabel" type="Label" parent="MainPanel/HeatMap"]
 margin_left = 16.5476
@@ -221,10 +222,10 @@ margin_bottom = 29.1429
 text = "heat map"
 
 [node name="FileList" type="Node" parent="."]
-script = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="Calendar" type="Node" parent="."]
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 [connection signal="pressed" from="MainPanel/ImportFilesButton" to="MainPanel/ImportFilesButton" method="_on_ImportFilesButton_pressed"]
 [connection signal="file_added" from="MainPanel/ImportFilesDialog" to="FileList" method="_on_ImportFilesDialog_file_added"]
 [connection signal="file_selected" from="MainPanel/ImportFilesDialog" to="MainPanel/ImportFilesDialog" method="_on_ImportFilesDialog_file_selected"]

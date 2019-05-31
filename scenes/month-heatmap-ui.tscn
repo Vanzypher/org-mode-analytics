@@ -7,7 +7,6 @@ custom_constants/hseparation = 12
 columns = 4
 
 [node name="Week1" type="GridContainer" parent="."]
-editor/display_folded = true
 margin_bottom = 72.0
 custom_constants/vseparation = 12
 custom_constants/hseparation = 12

@@ -1,7 +1,7 @@
 extends Node
 
 var current_date : Dictionary
-var calendar: Array = []
+var current_day_of_year : int
 
 func _init():
 	current_date = OS.get_datetime();
@@ -9,7 +9,6 @@ func _init():
 	current_date.erase("dst")
 # warning-ignore:return_value_discarded
 	current_date.erase("second")
-#	print(current_date)
 	generate_calendar_backwards(current_date)
 
 
@@ -18,10 +17,8 @@ func generate_calendar_backwards(from_date):
 	var day : int = starting_date["day"]
 	var month : int = starting_date["month"]
 	var year : int = starting_date.year
-# warning-ignore:unused_variable
-	var current_day_of_year : int = nth_day_of_year(day, month, year)
-	
-	calendar.push_front(starting_date)
+
+	current_day_of_year = nth_day_of_year(day, month, year)
 	
 
 
@@ -49,7 +46,7 @@ func nth_day_of_year(day:int,month:int,year:int):
 #			print("day" + str(curr_day) + " month " + str(curr_month))
 			pass
 		pass
-#	print(accumulative_day)
+	return accumulative_day
 	
 
 func days_in_month(month,year):
