@@ -19,9 +19,12 @@ maybe make a resource for that?
    CLOSED: [2019-05-29 Wed 07:03]
 ** parse org files to objects or dictionary
    rules:
-*** if the line starts with *[space] it's a 1st lvl header
+*** DONE if the line starts with *[space] it's a 1st lvl header
+    CLOSED: [2019-05-31 Fri 04:36]
 *** strip the file from all non header and non property text
-*** if it start with [indentend with last header]:LOGBOOK:
+*** if it start with :LOGBOOK: after removal of left spaces
+*** DONE get dictionary with clock start and end
+    CLOSED: [2019-05-31 Fri 04:40]
 
 ** show date and time heatmap clock time for each file
 take into account the time clicked and the frequency in the day
@@ -38,3 +41,4 @@ one way to do it is by file's edited time
  or by a has
 ** have a way to remove files
 ** remember the last opened files
+   

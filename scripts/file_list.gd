@@ -12,7 +12,9 @@ func _on_ImportFilesDialog_file_added(file_info: Dictionary):
 
 func get_logbook_entries(org_mode_text: String):
 	var text: Array = org_mode_text.split("\n")
+# warning-ignore:unused_variable
 	var found_logbook = false
+# warning-ignore:unused_variable
 	var last_header: String = ""
 	
 	for line in text:
@@ -31,17 +33,48 @@ func get_logbook_entries(org_mode_text: String):
 			print(line)
 #			print(last_header)
 			
+# warning-ignore:unused_variable
 			var start_time
+# warning-ignore:unused_variable
 			var end_time
 			
-			start_time = line.substr(1, 20)
-			end_time = line.substr(25, 20)
+			start_time = line.substr(0, 22)
+			end_time = line.substr(24, 22)
+			
+			# start_time and end_time from string to dictionary
+			start_time = _convert_string_date_to_dict(start_time)
+			end_time = _convert_string_date_to_dict(end_time)
+			print(start_time)
+			print(end_time)
+			
 			
 		line = line.lstrip("*")
 		line = line.lstrip(" ")
 		last_header = line
 		pass
 	
-		
-	
 	pass
+# date in the format: [YYYY-MM-DD Wed HH:mm]
+func _convert_string_date_to_dict(date:String) -> Dictionary:
+	var date_dict : Dictionary = {}
+	
+	var year: int = int(date.substr(1,4))
+	date_dict["year"] = year
+#	print(year)
+	var month: int = int(date.substr(6,2))
+	date_dict["month"] = month
+#	print(month)
+	var day: int = int(date.substr(10,2))
+	date_dict["day"] = day
+#	print(day)
+	var day_of_the_week: String = date.substr(12,3)
+	date_dict["day_of_the_week"] = day_of_the_week
+#	print(day_of_the_week)
+	var hour: String = date.substr(16,2)
+	date_dict["hour"] = hour
+#	print(hour)
+	var minute: String = date.substr(19,2)
+	date_dict["minute"] = minute
+#	print(minute)
+#	print(date_dict)
+	return date_dict
