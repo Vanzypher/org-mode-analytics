@@ -1,7 +1,7 @@
 extends Node
 
 var list: Array = []
-var clocks
+#var clocks
 
 func _on_ImportFilesDialog_file_added(file_info: Dictionary):
 #	print(file_info)
@@ -30,7 +30,7 @@ func get_logbook_entries(org_mode_text: String):
 		
 		if line.begins_with("CLOCK:"):
 			line = line.trim_prefix("CLOCK: ")
-			print(line)
+#			print(line)
 #			print(last_header)
 			
 # warning-ignore:unused_variable
@@ -96,4 +96,3 @@ func convert_day_of_the_week(day_string:String):
 			return 5
 		"Sat":
 			return 6
-	return -1

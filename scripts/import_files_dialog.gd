@@ -3,7 +3,7 @@ extends FileDialog
 onready var item_list: ItemList = get_node("/root/Main/MainPanel/ItemList")
 
 signal file_added
-signal file_removed
+#signal file_removed
 
 func _on_ImportFilesDialog_files_selected(paths: PoolStringArray):
 	for path in paths:
