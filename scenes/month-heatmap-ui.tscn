@@ -1,0 +1,253 @@
+[gd_scene format=2]
+
+[node name="Month" type="GridContainer"]
+margin_bottom = 12.0
+custom_constants/vseparation = 12
+custom_constants/hseparation = 12
+columns = 4
+
+[node name="Week1" type="GridContainer" parent="."]
+editor/display_folded = true
+margin_bottom = 72.0
+custom_constants/vseparation = 12
+custom_constants/hseparation = 12
+
+[node name="Day1" type="Control" parent="Week1"]
+
+[node name="ColorRect" type="ColorRect" parent="Week1/Day1"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day2" type="Control" parent="Week1"]
+margin_top = 12.0
+margin_bottom = 12.0
+
+[node name="ColorRect" type="ColorRect" parent="Week1/Day2"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day3" type="Control" parent="Week1"]
+margin_top = 24.0
+margin_bottom = 24.0
+
+[node name="ColorRect" type="ColorRect" parent="Week1/Day3"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day4" type="Control" parent="Week1"]
+margin_top = 36.0
+margin_bottom = 36.0
+
+[node name="ColorRect" type="ColorRect" parent="Week1/Day4"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day5" type="Control" parent="Week1"]
+margin_top = 48.0
+margin_bottom = 48.0
+
+[node name="ColorRect" type="ColorRect" parent="Week1/Day5"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day6" type="Control" parent="Week1"]
+margin_top = 60.0
+margin_bottom = 60.0
+
+[node name="ColorRect" type="ColorRect" parent="Week1/Day6"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day7" type="Control" parent="Week1"]
+margin_top = 72.0
+margin_bottom = 72.0
+
+[node name="ColorRect" type="ColorRect" parent="Week1/Day7"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Week2" type="GridContainer" parent="."]
+editor/display_folded = true
+margin_left = 12.0
+margin_right = 12.0
+margin_bottom = 72.0
+custom_constants/vseparation = 12
+custom_constants/hseparation = 12
+
+[node name="Day1" type="Control" parent="Week2"]
+
+[node name="ColorRect" type="ColorRect" parent="Week2/Day1"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day2" type="Control" parent="Week2"]
+margin_top = 12.0
+margin_bottom = 12.0
+
+[node name="ColorRect" type="ColorRect" parent="Week2/Day2"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day3" type="Control" parent="Week2"]
+margin_top = 24.0
+margin_bottom = 24.0
+
+[node name="ColorRect" type="ColorRect" parent="Week2/Day3"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day4" type="Control" parent="Week2"]
+margin_top = 36.0
+margin_bottom = 36.0
+
+[node name="ColorRect" type="ColorRect" parent="Week2/Day4"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day5" type="Control" parent="Week2"]
+margin_top = 48.0
+margin_bottom = 48.0
+
+[node name="ColorRect" type="ColorRect" parent="Week2/Day5"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day6" type="Control" parent="Week2"]
+margin_top = 60.0
+margin_bottom = 60.0
+
+[node name="ColorRect" type="ColorRect" parent="Week2/Day6"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day7" type="Control" parent="Week2"]
+margin_top = 72.0
+margin_bottom = 72.0
+
+[node name="ColorRect" type="ColorRect" parent="Week2/Day7"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Week3" type="GridContainer" parent="."]
+editor/display_folded = true
+margin_left = 24.0
+margin_right = 24.0
+margin_bottom = 72.0
+custom_constants/vseparation = 12
+custom_constants/hseparation = 12
+
+[node name="Day1" type="Control" parent="Week3"]
+
+[node name="ColorRect" type="ColorRect" parent="Week3/Day1"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day2" type="Control" parent="Week3"]
+margin_top = 12.0
+margin_bottom = 12.0
+
+[node name="ColorRect" type="ColorRect" parent="Week3/Day2"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day3" type="Control" parent="Week3"]
+margin_top = 24.0
+margin_bottom = 24.0
+
+[node name="ColorRect" type="ColorRect" parent="Week3/Day3"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day4" type="Control" parent="Week3"]
+margin_top = 36.0
+margin_bottom = 36.0
+
+[node name="ColorRect" type="ColorRect" parent="Week3/Day4"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day5" type="Control" parent="Week3"]
+margin_top = 48.0
+margin_bottom = 48.0
+
+[node name="ColorRect" type="ColorRect" parent="Week3/Day5"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day6" type="Control" parent="Week3"]
+margin_top = 60.0
+margin_bottom = 60.0
+
+[node name="ColorRect" type="ColorRect" parent="Week3/Day6"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day7" type="Control" parent="Week3"]
+margin_top = 72.0
+margin_bottom = 72.0
+
+[node name="ColorRect" type="ColorRect" parent="Week3/Day7"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Week4" type="GridContainer" parent="."]
+editor/display_folded = true
+margin_left = 36.0
+margin_right = 36.0
+margin_bottom = 72.0
+custom_constants/vseparation = 12
+custom_constants/hseparation = 12
+
+[node name="Day1" type="Control" parent="Week4"]
+
+[node name="ColorRect" type="ColorRect" parent="Week4/Day1"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day2" type="Control" parent="Week4"]
+margin_top = 12.0
+margin_bottom = 12.0
+
+[node name="ColorRect" type="ColorRect" parent="Week4/Day2"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day3" type="Control" parent="Week4"]
+margin_top = 24.0
+margin_bottom = 24.0
+
+[node name="ColorRect" type="ColorRect" parent="Week4/Day3"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day4" type="Control" parent="Week4"]
+margin_top = 36.0
+margin_bottom = 36.0
+
+[node name="ColorRect" type="ColorRect" parent="Week4/Day4"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day5" type="Control" parent="Week4"]
+margin_top = 48.0
+margin_bottom = 48.0
+
+[node name="ColorRect" type="ColorRect" parent="Week4/Day5"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day6" type="Control" parent="Week4"]
+margin_top = 60.0
+margin_bottom = 60.0
+
+[node name="ColorRect" type="ColorRect" parent="Week4/Day6"]
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="Day7" type="Control" parent="Week4"]
+margin_top = 72.0
+margin_bottom = 72.0
+
+[node name="ColorRect" type="ColorRect" parent="Week4/Day7"]
+margin_right = 10.0
+margin_bottom = 10.0
